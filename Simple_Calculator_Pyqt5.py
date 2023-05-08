@@ -91,8 +91,20 @@ class Calculator(QWidget):
     def setOperation(self, operation):
         self.operation = operation
 #create function for calculate button
-# Get user inputs from QLineEdits
-#If input is not float, displays error message and clears initial input
+    def calculateResult(self):
+        # Get user inputs from QLineEdits
+        num1 = self.num1LineEdit.text()
+        num2 = self.num2LineEdit.text()
+
+        #If input is not float, displays error message and clears initial input
+        try:
+            num1 = float(num1)
+            num2 = float(num2)
+        except ValueError:
+            self.num1LineEdit.clear()
+            self.num2LineEdit.clear()
+            return QMessageBox.information(self, 'Value Error', 'Invalid Input, Please Input Numbers Only', QMessageBox.Ok)
+        
 #if operator is not selected, prompts user to choose an operator
 # Calculate result based on selected operation
 # Display result
