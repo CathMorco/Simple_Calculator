@@ -132,6 +132,11 @@ class Calculator(QWidget):
 # Display result
         self.screenDisplay.setText(str(result))
 #Asks user if they want to try again
+        messageBox = QMessageBox()
+        messageBox.setIcon(QMessageBox.Question)
+        messageBox.setText("Do you want to try again?")
+        messageBox.setWindowTitle("Confirmation")
+        messageBox.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
 #If yes, repeats process
 #If no, displays thank you message and closes program
 #runs the main program
