@@ -5,6 +5,10 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 #creates class for widgets
+class Calculator(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.initUI()
 #creates function for GUI
 # Set window properties
 #Create a function for the selected operation
