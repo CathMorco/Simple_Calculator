@@ -109,6 +109,26 @@ class Calculator(QWidget):
         if not hasattr(self, 'operation'):
             return QMessageBox.information(self, 'Operation Error', 'Please choose an operation', QMessageBox.Ok)
 # Calculate result based on selected operation
+        #For addition
+        if self.operation == 1:
+            result = num1 + num2
+        #For subtraction
+        elif self.operation == 2:
+            result = num1 - num2
+        #For multiplication
+        elif self.operation == 3:
+            result = num1 * num2
+        #for division
+        elif self.operation == 4:
+            try:
+                #Does not allow zero division
+                result = num1 / num2
+                self.resultLabel.setText('Zero Division not allowed')
+            except ZeroDivisionError:
+                #clears initial input and displays error message
+                self.num2LineEdit.clear()
+                return QMessageBox.information(self, 'Syntax Error', 'Zero Division not allowed', QMessageBox.Ok)
+
 # Display result
 #Asks user if they want to try again
 #If yes, repeats process
