@@ -84,6 +84,9 @@ class Calculator(QWidget):
                                  "background : grey;"
                                  "}")
 # Set window properties
+        self.setWindowTitle('Calculator')
+        self.setGeometry(100, 100, 500, 400)
+        self.show()
 #Create a function for the selected operation
 #create function for calculate button
 # Get user inputs from QLineEdits
