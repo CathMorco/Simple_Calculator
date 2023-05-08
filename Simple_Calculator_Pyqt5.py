@@ -151,3 +151,7 @@ class Calculator(QWidget):
             x = Tymsg.exec_()
             sys.exit(app.exec_())
 #runs the main program
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    Calculator()
+    sys.exit(app.exec_())
