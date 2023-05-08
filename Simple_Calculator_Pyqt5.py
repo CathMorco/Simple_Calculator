@@ -130,6 +130,7 @@ class Calculator(QWidget):
                 return QMessageBox.information(self, 'Syntax Error', 'Zero Division not allowed', QMessageBox.Ok)
 
 # Display result
+        self.screenDisplay.setText(str(result))
 #Asks user if they want to try again
 #If yes, repeats process
 #If no, displays thank you message and closes program
