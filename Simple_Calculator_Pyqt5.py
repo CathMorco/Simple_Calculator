@@ -137,6 +137,17 @@ class Calculator(QWidget):
         messageBox.setText("Do you want to try again?")
         messageBox.setWindowTitle("Confirmation")
         messageBox.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
-#If yes, repeats process
-#If no, displays thank you message and closes program
+
+        response = messageBox.exec_()
+        #If yes, repeats process
+        if response == QMessageBox.Yes:
+            self.num1LineEdit.clear()
+            self.num2LineEdit.clear()
+        #If no, displays thank you message and closes program
+        else:
+            Tymsg = QMessageBox()
+            Tymsg.setWindowTitle("Message")
+            Tymsg.setText("Thank you!")
+            x = Tymsg.exec_()
+            sys.exit(app.exec_())
 #runs the main program
