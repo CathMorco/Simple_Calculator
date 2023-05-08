@@ -4,7 +4,7 @@ A repository for a simple calculator program, which utilizes the PyQt5 library. 
 Program Description
 -----------
 
-A python code for a simple calculator program, which utilizes the PyQt5 library. The program asks the user for two numbers and displays the output based on the chosen operator and two number inputs. Utilizes Exception Handling as well as allows the user to be given an option whther they want to try again.
+A python code for a simple calculator program, which utilizes the PyQt5 library. The program asks the user for two numbers and displays the output based on the chosen operator and two number inputs. Utilizes Exception Handling as well as allows the user to be given an option whether they want to try again.
 
 
 Required Library
