@@ -106,6 +106,8 @@ class Calculator(QWidget):
             return QMessageBox.information(self, 'Value Error', 'Invalid Input, Please Input Numbers Only', QMessageBox.Ok)
         
 #if operator is not selected, prompts user to choose an operator
+        if not hasattr(self, 'operation'):
+            return QMessageBox.information(self, 'Operation Error', 'Please choose an operation', QMessageBox.Ok)
 # Calculate result based on selected operation
 # Display result
 #Asks user if they want to try again
