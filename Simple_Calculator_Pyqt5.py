@@ -88,6 +88,8 @@ class Calculator(QWidget):
         self.setGeometry(100, 100, 500, 400)
         self.show()
 #Create a function for the selected operation
+    def setOperation(self, operation):
+        self.operation = operation
 #create function for calculate button
 # Get user inputs from QLineEdits
 #If input is not float, displays error message and clears initial input
